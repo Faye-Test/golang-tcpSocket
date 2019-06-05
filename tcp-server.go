@@ -20,7 +20,7 @@ func main() {
     // will listen for message to process ending in newline (\n)
     message, _ := bufio.NewReader(conn).ReadString('\n')
     // output message received
-    fmt.Print("server Message Received:", string(message))
+    fmt.Print("Message Received of Server:", string(message))
     // sample process for string received
     newmessage := strings.ToUpper(message)
     // send new string back to client
