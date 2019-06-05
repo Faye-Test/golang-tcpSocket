@@ -16,7 +16,7 @@ func main() {
   conn, _ := ln.Accept()
 
   // run loop forever (or until ctrl-c)
-  for {
+  for index:=0;index<10; index++ {
     // will listen for message to process ending in newline (\n)
     message, _ := bufio.NewReader(conn).ReadString('\n')
     // output message received
