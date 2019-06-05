@@ -12,12 +12,12 @@ func main() {
   for index:=0;index<10; index++ { 
     // read in input from stdin
     reader := bufio.NewReader(os.Stdin)
-    fmt.Print("Text to send: ")
+    fmt.Print("Text to send of client-new: ")
     text, _ := reader.ReadString('\n')
     // send to socket
     fmt.Fprintf(conn, text + "\n")
     // listen for reply
     message, _ := bufio.NewReader(conn).ReadString('\n')
-    fmt.Print("Message from server: "+message)
+    fmt.Print("Message from server-new: "+message)
   }
 }
