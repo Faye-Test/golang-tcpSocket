@@ -8,8 +8,8 @@ import "os"
 func main() {
 
   // connect to this socket
-  conn, _ := net.Dial("tcp", "127.0.0.1:8081")
-  for { 
+  conn, _ := net.Dial("tcp", "0.0.0.0:8081")
+  for index:=0;index<10; index++ { 
     // read in input from stdin
     reader := bufio.NewReader(os.Stdin)
     fmt.Print("Text to send: ")
